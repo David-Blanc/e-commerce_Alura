@@ -1,0 +1,13 @@
+.productos__contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .productos__contenedor {
+        gap: 1rem;
+    }
+
+}

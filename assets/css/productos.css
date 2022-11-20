@@ -1,0 +1,12 @@
+.productos {
+    background: var(--fondo-productos);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem var(--margen-lateral);    
+}
+
+@media screen and (max-width: 1024px) {
+    .productos {
+        padding: 4rem var(--margen-lateralTablet);    
+    }
+}

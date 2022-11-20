@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <script src="https://kit.fontawesome.com/a18c207c0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/cabecera.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+
+    <link rel="stylesheet" href="assets/css/productos.css">
+    <link rel="stylesheet" href="assets/css/productos/productos-descripcion.css">
+    <link rel="stylesheet" href="assets/css/productos/producto.css">
+    <link rel="stylesheet" href="assets/css/productos/productos-contenedor.css">
+
+    <link rel="stylesheet" href="assets/css/rodapie.css">
+    <link rel="stylesheet" href="assets/css/rodapie/rodapie-contacto.css">
+    <link rel="stylesheet" href="assets/css/rodapie/rodapie-firma.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <img class="cabecera__logo" src="assets/img/Logo.svg" alt="Logo">
+        <form class="cabecera__buscador" action="">
+            <input class="buscador__textarea" type="text" name="" id="" placeholder="¿Qué desea buscar?">
+            <button class="buscador__boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <button class="cabecera__boton">Login</button>
+    </header>
+    <section class="banner">
+        <h1 class="banner__titulo">Febrero Promocional</h1>
+        <p class="banner__parrafo">Productos seleccionados con 33% de descuento</p>
+        <button class="banner__boton">Ver Consolas</button>
+    </section>
+
+
+    <section class="productos">
+        <div class="productos__descripcion">
+            <h2 class="descripcion__titulo">Star Wars</h2>
+            <button class="descripcion__boton">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="productos__contenedor">
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_1VV1MRafd7A.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_4OHkK555s1A.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_6FDXGY9J6y4.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_epRFE_hBNjo.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_KeGToDVN0l4.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="assets/img/dePrueba/unsplash_R8L1l9RN198.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodapie">
+        <div class="rodapie__contacto">
+            <img class="contacto__logo" src="assets/img/Logo.svg" alt="Logo">
+            <nav class="contacto__navegador">
+                <ul class="novegador__lista">
+                    <li><a href="#"></a>¿Quiénes Somos?</li>
+                    <li><a href="#"></a>Política de privacidad</li>
+                    <li><a href="#"></a>Programa de fidelidad</li>
+                    <li><a href="#"></a>Nuestras tiendas</li>
+                    <li><a href="#"></a>Quiero ser franquiciado</li>
+                    <li><a href="#"></a>Anuncie aquí</li>
+                </ul>
+            </nav>
+            <form class="contacto__formulario" action="">
+                <h2 class="formulario__titulo">Hable con nosotros</h2>
+                <div class="formulario__nombre">
+                    <label class="nombre__leyenda" for="nombre">Nombre</label>
+                    <input class="nombre__area" id="nombre" type="text">
+                </div>
+                <textarea class="formulario__texto" placeholder="Escribe tu mensaje" name="" id="" cols="30" rows="10"></textarea>
+                <input class="formulario__boton" type="submit" value="Enviar mensaje" />
+            </form>
+        </div>
+        <div class="rodapie__firma">
+            <p>Desarrollado por David Blanc<br/>2022</p>
+        </div>
+        
+    </footer>
+</body>
+
+</html>

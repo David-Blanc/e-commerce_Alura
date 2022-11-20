@@ -1,0 +1,149 @@
+.rodapie__contacto {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem var(--margen-lateral);
+    justify-content: space-between;
+    background: var(--fondo-rodapie);
+    align-items: flex-start;
+}
+
+/* .contacto__logo {
+
+} */
+
+.contacto__navegador {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+}
+
+.novegador__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1.5rem;
+}
+
+.contacto__formulario {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1rem;
+}
+
+.formulario__titulo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 19px;
+    color: var(--font-color);
+}
+
+.formulario__nombre {
+    background: var(--fondo-color);
+    width: 100%;
+    font-style: normal;
+    border-radius: 4px;
+}
+
+.nombre__leyenda {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--input-placeholder);
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+}
+
+.nombre__area {
+    background: var(--fondo-color);
+    width: 100%;
+    border: none;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.nombre__area:focus {
+    outline: none;
+}
+
+.formulario__texto {
+    width: 100%;
+    height: 5rem;
+    background: var(--fondo-color);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    resize: none;
+
+    color: var(--input-placeholder);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+.formulario__texto:focus {
+    outline: none;
+    color: var(--font-color);
+
+}
+
+.formulario__boton {
+    font-size: 1rem;
+    color: var(--font-contraste);
+    background: var(--azul-destaque);
+    border: none;
+    height: 3rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .rodapie__contacto {
+        flex-direction: column;
+        padding: 2rem var(--margen-lateralTablet);
+        height: 364px;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+    }
+
+    .contacto__formulario {
+        width: 60%;
+    }
+
+    .formulario__boton {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rodapie__contacto {
+        flex-direction: column;
+        height: auto;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .contacto__navegador {
+        margin-top: 1rem;
+    }
+    
+    .novegador__lista {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contacto__formulario {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}

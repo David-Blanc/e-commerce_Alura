@@ -1,0 +1,111 @@
+.cabecera {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    background: var(--fondo-color);
+    padding: 2rem var(--margen-lateral);
+}
+
+.cabecera__buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fondo-productos);
+    width: 28vw;
+    height: 3rem;
+    border-radius: 20px;
+    margin: 0 2rem;
+}
+
+.buscador__textarea {
+    width: 80%;
+    background: var(--fondo-input);
+    border: none;
+    color: var(--input-placeholder);
+    font-size: 1rem;
+}
+
+.buscador__textarea:focus {
+    outline: none;
+    color: var(--font-color);
+}
+
+.buscador__boton {
+    background: var(--fondo-input);
+    border: none;
+    color: var(--input-placeholder);
+    font-size: 1rem;
+    padding: 0;
+    margin-left: 4px;
+
+}
+
+.cabecera__boton {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--azul-destaque);
+    font-style: normal;
+    border: 1px solid var(--azul-destaque);
+    background: var(--fondo-color);
+    width: 9rem;
+    height: 3rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .cabecera {
+        padding: 1.15rem var(--margen-lateralTablet);
+    }
+
+    .cabecera__logo {
+        width: 120px;
+    }
+
+    .cabecera__buscador {
+        width: 35vw;
+        height: 2.5rem;
+    }
+
+    .buscador__textarea {
+        font-size: 0.875rem;;
+    }
+
+    .cabecera__boton {
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cabecera {
+        justify-content: space-between;
+    }
+    
+    .cabecera__logo {
+        order: 1;
+    }
+
+    .cabecera__buscador {
+        order: 3;
+        margin: 0;
+        width: auto;
+        background: var(--fondo-color);
+    }
+
+    .buscador__textarea {
+        display: none;
+    }
+
+    .buscador__boton {
+        background: var(--fondo-color);
+        color: var(--font-color);
+    }
+
+    .cabecera__boton {
+        order: 2;
+        margin: 0;
+    }
+}

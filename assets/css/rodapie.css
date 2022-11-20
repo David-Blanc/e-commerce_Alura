@@ -1,0 +1,4 @@
+.rodapie {
+    display: flex;
+    flex-direction: column;
+}

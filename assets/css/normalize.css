@@ -1,0 +1,27 @@
+:root {
+    --fondo-productos: #F5F5F5;
+    --fondo-rodapie: #EAF2FD;
+    --fondo-color: #FFFFFF;
+    --fondo-input: #F5F5F5;
+    --input-placeholder: #A2A2A2;
+    --font-color: #464646;
+    --font-contraste: #FFFFFF;
+    --azul-destaque: #2A7AE4;
+
+    --margen-lateral: 10%;
+    --margen-lateralTablet: 5%;
+
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+}

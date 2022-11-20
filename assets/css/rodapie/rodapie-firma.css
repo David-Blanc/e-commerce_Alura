@@ -1,0 +1,12 @@
+.rodapie__firma {
+    text-align: center;
+    margin: 1.5rem 0 1.5rem 0;
+    background: var(--fondo-color);
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    color: var(--font-color);
+}
