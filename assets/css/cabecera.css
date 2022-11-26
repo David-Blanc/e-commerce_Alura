@@ -5,7 +5,11 @@
     align-items: center;
 
     background: var(--fondo-color);
-    padding: 2rem var(--margen-lateral);
+    padding: 2rem 0;
+    width: 1136px;
+    margin: 0 auto;
+
+
 }
 
 .cabecera__buscador {
@@ -43,21 +47,40 @@
 }
 
 .cabecera__boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 400;
     font-size: 1rem;
+    text-decoration: auto;
     color: var(--azul-destaque);
     font-style: normal;
     border: 1px solid var(--azul-destaque);
     background: var(--fondo-color);
     width: 9rem;
     height: 3rem;
-    align-items: center;
     margin-left: auto;
+}
+
+@media screen and (max-width: 1420px) {
+    .cabecera {
+        width: 944px;
+
+    }
+
+}
+
+@media screen and (max-width: 1101px) {
+    .cabecera {
+        width: 752px;
+
+    }
+
 }
 
 @media screen and (max-width: 1024px) {
     .cabecera {
-        padding: 1.15rem var(--margen-lateralTablet);
+        padding: 1.15rem 0;
     }
 
     .cabecera__logo {
@@ -82,6 +105,7 @@
 @media screen and (max-width: 768px) {
     .cabecera {
         justify-content: space-between;
+        width: 368px;
     }
     
     .cabecera__logo {
@@ -107,5 +131,11 @@
     .cabecera__boton {
         order: 2;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cabecera {
+        width: 336px;
     }
 }

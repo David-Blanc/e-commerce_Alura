@@ -7,9 +7,8 @@
     --font-color: #464646;
     --font-contraste: #FFFFFF;
     --azul-destaque: #2A7AE4;
-
-    --margen-lateral: 10%;
-    --margen-lateralTablet: 5%;
+    --rojo-error: #dd3c10;
+    --fondo-error: #ffebe8;
 
     font-size: 16px;
 }
@@ -24,4 +23,96 @@ body {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 
+}
+
+.boton {
+    font-size: 1rem;
+    color: var(--font-contraste);
+    background: var(--azul-destaque);
+    border: none;
+    height: 3rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.input__container {
+    background: var(--fondo-color);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    box-shadow: 0px 1px 1px 0px #cacaca;
+    color: var(--font-color); 
+}
+
+.input__textarea {
+    height: 5rem;
+    padding-top: 0.5rem;
+    
+}
+
+.input__label {
+    display: block;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--input-placeholder);
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+}
+
+.input__area {
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    padding: 0 0.5rem 0.4rem 0.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    resize: none;
+    overflow: hidden;
+    background: none;
+}
+
+textarea.input__area {
+    height: 100%;
+}
+
+.input__area:focus {
+    outline: none;
+}
+
+.input__messege--error {
+    position: absolute;
+    color: var(--rojo-error);
+    font-weight: 500;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    visibility: hidden;
+    width: 423px;
+}
+
+.input__container--invalid {
+    border: 1px solid var(--rojo-error);
+}
+
+.input__container--invalid span {
+    visibility: visible;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .boton {
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .input__messege--error {
+        width: 275px;
+    }
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+
+    <script src="https://kit.fontawesome.com/a18c207c0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/cabecera.css">
+
+    <link rel="stylesheet" href="../assets/css/rodapie.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-contacto.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-firma.css">
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/agregar.css">
+</head>
+
+<body>
+    <header class="cabecera" data-header>
+        <a href="../index.html"><img class="cabecera__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
+        <form class="cabecera__buscador" action="">
+            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?">
+            <button class="buscador__boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <button class="cabecera__boton boton__admin" data-admin-boton>Menú Administrador</button>
+    </header>
+
+    <section class="agregar" data-agregar>
+        <form class="login__container" action="" data-agregar-form>
+            <h2 class="login__title">Editar producto seleccionado</h2>
+            <div class="input__container">
+                <label class="input__label" for="imagenURL">URL de imagen</label>
+                <input class="input__area" id="imagenURL" type="text" data-agregar="url" required>
+                <span class="input__messege--error">URL</span>
+            </div>
+            <div class="input__container">
+                <label class="input__label" for="categoria">Categoría</label>
+                <input class="input__area" id="categoria" type="text" data-agregar="categoria" required>
+                <span class="input__messege--error">Este campo no es válido.</span>
+            </div>
+            <div class="input__container">
+                <label class="input__label" for="productoNombre">Nombre del producto</label>
+                <input class="input__area" id="productoNombre" type="text" data-agregar="nombre" required>
+                <span class="input__messege--error">Este campo no es válido.</span>
+            </div>
+            <div class="input__container">
+                <label class="input__label" for="productoPrecio">Precio del producto</label>
+                <input class="input__area" id="productoPrecio" type="text" data-agregar="precio" pattern="^[$] \d+[,.]\d{2}$" title="Formato: $ 00,00 (en dólares e incluir céntimos)" required>
+                <span class="input__messege--error">Este campo no es válido.</span>
+            </div>
+            <div class="input__container input__textarea">
+                <textarea class="input__area" placeholder="Describir producto" name="" cols="30" rows="10" data-agregar="descripcion" required maxlength="250"></textarea>
+                <span class="input__messege--error">Este campo no es válido.</span>
+            </div>
+            <input class="login__boton boton" type="submit" value="Editar producto" data-agregar-boton/>
+        </form>
+    </section>
+
+    <footer class="rodapie">
+        <div class="rodapie__contacto">
+            <div class="contacto__container">
+                <a href="../index.html"><img class="contacto__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
+                <nav class="contacto__navegador">
+                    <ul class="novegador__lista">
+                        <li><a href="#"></a>¿Quiénes Somos?</li>
+                        <li><a href="#"></a>Política de privacidad</li>
+                        <li><a href="#"></a>Programa de fidelidad</li>
+                        <li><a href="#"></a>Nuestras tiendas</li>
+                        <li><a href="#"></a>Quiero ser franquiciado</li>
+                        <li><a href="#"></a>Anuncie aquí</li>
+                    </ul>
+                </nav>
+                <form class="contacto__formulario" action="">
+                    <h2 class="formulario__titulo">Hable con nosotros</h2>
+                    <div class="input__container">
+                        <label class="input__label" for="nombre">Nombre</label>
+                        <input class="input__area" id="nombre" type="text" data-agregar="nombreUsuario" required>
+                        <span class="input__messege--error">Este campo no es válido.</span>
+                    </div>
+                    <div class="input__container input__textarea">
+                        <textarea class="input__area" placeholder="Escribe tu mensaje" cols="1" rows="1" data-agregar="mensajeUsuario" required maxlength="250"></textarea>
+                        <span class="input__messege--error">Este campo no es válido.</span>
+                    </div>
+                    <input class="formulario__boton boton" type="submit" value="Enviar mensaje" />
+                </form>
+            </div>
+
+        </div>
+        <div class="rodapie__firma">
+            <p>Desarrollado por David Blanc<br />2022</p>
+        </div>
+
+    </footer>
+    <script type="module" src="../js/controllers/edicion-controller.js"></script>
+    <script type="module" src="../js/app.js"></script>
+</body>
+
+</html>

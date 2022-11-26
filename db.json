@@ -1,0 +1,110 @@
+{
+  "usuario": [
+    {
+      "email": "alura@alura.com",
+      "contraseña": "alura"
+    },
+    {
+      "email": "alura2@alura.com",
+      "contraseña": "alura2"
+    }
+  ],
+  "producto": [
+    {
+      "url": "assets/img/dePrueba/unsplash_1VV1MRafd7A.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 1
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_4OHkK555s1A.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 2
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_6FDXGY9J6y4.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 3
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_KeGToDVN0l4.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 5
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_R8L1l9RN198.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 6
+    },
+    {
+      "url": "assets/img/dePrueba/Skill (1).png",
+      "categoria": "Consolas",
+      "nombre": "Sony PlayStation 5",
+      "precio": "$ 699,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 7
+    },
+    {
+      "url": "assets/img/dePrueba/Skill.png",
+      "categoria": "Consolas",
+      "nombre": "Control Xbox One",
+      "precio": "$ 29,90",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 8
+    },
+    {
+      "url": "assets/img/dePrueba/Skill (2).png",
+      "categoria": "Consolas",
+      "nombre": "Controles Nintendo Switch",
+      "precio": "$ 30,59",
+      "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 9
+    },
+    {
+      "url": "assets/img/dePrueba/Skill (4).png",
+      "categoria": "Consolas",
+      "nombre": "Consola Gameboy",
+      "precio": "$ 24,99",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 11
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_ZV7lnfyQLmA.png",
+      "categoria": "Consolas",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": 12
+    },
+    {
+      "url": "assets/img/dePrueba/unsplash_epRFE_hBNjo.png",
+      "categoria": "Star Wars",
+      "nombre": "Producto XYZ",
+      "precio": "$ 60,00",
+      "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": "51cfc07c-2208-4b0c-8fe2-e15569064b77"
+    },
+    {
+      "url": "assets/img/dePrueba/Skill (3).png",
+      "categoria": "Consolas",
+      "nombre": "Xbox Series X",
+      "precio": "$ 495,01",
+      "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
+      "id": "5bbf71e0-5518-4f41-8a04-8cd5f237fa74"
+    }
+  ]
+}

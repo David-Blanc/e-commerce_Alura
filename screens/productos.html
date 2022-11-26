@@ -9,55 +9,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AluraGeek</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
 
     <script src="https://kit.fontawesome.com/a18c207c0f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/cabecera.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="../assets/css/cabecera.css">
 
-    <link rel="stylesheet" href="assets/css/productos.css">
-    <link rel="stylesheet" href="assets/css/productos/productos-descripcion.css">
-    <link rel="stylesheet" href="assets/css/productos/producto.css">
-    <link rel="stylesheet" href="assets/css/productos/productos-contenedor.css">
+    <link rel="stylesheet" href="../assets/css/productos.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-descripcion.css">
+    <link rel="stylesheet" href="../assets/css/productos/producto.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-contenedor.css">
 
-    <link rel="stylesheet" href="assets/css/rodapie.css">
-    <link rel="stylesheet" href="assets/css/rodapie/rodapie-contacto.css">
-    <link rel="stylesheet" href="assets/css/rodapie/rodapie-firma.css">
+    <link rel="stylesheet" href="../assets/css/rodapie.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-contacto.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-firma.css">
+
 </head>
 
 <body>
     <header class="cabecera">
-        <a href="index.html"><img class="cabecera__logo" src="assets/img/Logo.svg" alt="Logo"></a>
-        <form class="cabecera__buscador" action="" data-form-search>
-            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-input-search>
-            <button class="buscador__boton" type="submit" data-submit-search><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="../index.html"><img class="cabecera__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
+        <form class="cabecera__buscador" action="">
+            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?">
+            <button class="buscador__boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-        <a href="screens/login.html" class="cabecera__boton">Login</a>
     </header>
-    <section class="banner">
-        <div class="banner__container">
-            <h1 class="banner__titulo">Febrero Promocional</h1>
-            <p class="banner__parrafo">Productos seleccionados con 33% de descuento</p>
-            <button class="banner__boton boton">Ver Consolas</button>
-        </div>
-    </section>
-
 
     <section class="productos">
         <div class="productos__descripcion">
-            <h2 class="descripcion__titulo">Star Wars</h2>
-            <button class="descripcion__boton">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-        <div class="productos__contenedor" data-productos-inicio>
-
+            <h2 class="descripcion__titulo">Todos los productos</h2>
+            <a href="../screens/registroProducto.html"><button class="boton">Agregar producto</button>
+        </div></a>
+        <div class="productos__contenedor" data-productos-container>
+            
         </div>
     </section>
 
     <footer class="rodapie">
         <div class="rodapie__contacto">
             <div class="contacto__container">
-                <a href="index.html"><img class="contacto__logo" src="assets/img/Logo.svg" alt="Logo"></a>
+                <a href="../index.html"><img class="contacto__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
                 <nav class="contacto__navegador">
                     <ul class="novegador__lista">
                         <li><a href="#"></a>¿Quiénes Somos?</li>
@@ -89,11 +80,9 @@
         </div>
 
     </footer>
-
-    <script type="module" src="js/controllers/client-controller.js"></script>
-    <script type="module" src="js/app.js"></script>
-    <script type="module" src="js/controllers/search-controller.js"></script>
     
+    <script type="module" src="../js/controllers/productos-controller.js"></script>
+    <script type="module" src="../js/app.js"></script>
 </body>
 
 </html>

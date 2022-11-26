@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+
+    <script src="https://kit.fontawesome.com/a18c207c0f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/cabecera.css">
+    <link rel="stylesheet" href="../assets/css/banner.css">
+
+    <link rel="stylesheet" href="../assets/css/productos.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-descripcion.css">
+    <link rel="stylesheet" href="../assets/css/productos/producto.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-contenedor.css">
+
+    <link rel="stylesheet" href="../assets/css/rodapie.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-contacto.css">
+    <link rel="stylesheet" href="../assets/css/rodapie/rodapie-firma.css">
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-pantallaGlobal.css">
+    <link rel="stylesheet" href="../assets/css/agregar.css">
+</head>
+
+<body>
+    <header class="cabecera" data-header>
+        <img class="cabecera__logo" src="../assets/img/Logo.svg" alt="Logo">
+        <form class="cabecera__buscador" action="">
+            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?">
+            <button class="buscador__boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <button class="cabecera__boton" data-login-botonInicio>Login</button>
+        <button class="cabecera__boton boton__admin" data-admin-boton>Menú Administrador</button>
+    </header>
+
+    <section class="login" data-login>
+        <form class="login__container" action="">
+            <h2 class="login__title">Iniciar Sesión</h2>
+            <input class="login__email inputText-sinLabel" type="email" placeholder="Escriba su correo electrónico">
+            <input class="login__password inputText-sinLabel" type="password" placeholder="Escriba su contraseña">
+            <input class="login__boton boton" type="submit" value="Entrar" data-login-boton />
+        </form>
+    </section>
+
+    <section class="productos productos__pantallaGlobal" data-productos>
+        <div class="productos__descripcion">
+            <h2 class="descripcion__titulo">Todos los productos</h2>
+            <button class="boton" data-agregarInicio-boton>Agregar producto</button>
+        </div>
+        <div class="productos__contenedor">
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_1VV1MRafd7A.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_4OHkK555s1A.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_6FDXGY9J6y4.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_epRFE_hBNjo.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_KeGToDVN0l4.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+            <div class="producto">
+                <img class="producto__imagen" src="../assets/img/dePrueba/unsplash_R8L1l9RN198.png" alt="">
+                <h3 class="producto__nombre">Producto XYZ</h3>
+                <p class="producto__precio">$ 60,00</p>
+                <button class="producto__boton">Ver Producto</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodapie">
+        <div class="rodapie__contacto">
+            <div class="contacto__container">
+                <img class="contacto__logo" src="../assets/img/Logo.svg" alt="Logo">
+                <nav class="contacto__navegador">
+                    <ul class="novegador__lista">
+                        <li><a href="#"></a>¿Quiénes Somos?</li>
+                        <li><a href="#"></a>Política de privacidad</li>
+                        <li><a href="#"></a>Programa de fidelidad</li>
+                        <li><a href="#"></a>Nuestras tiendas</li>
+                        <li><a href="#"></a>Quiero ser franquiciado</li>
+                        <li><a href="#"></a>Anuncie aquí</li>
+                    </ul>
+                </nav>
+                <form class="contacto__formulario" action="">
+                    <h2 class="formulario__titulo">Hable con nosotros</h2>
+                    <div class="input__container">
+                        <label class="input__label" for="nombre">Nombre</label>
+                        <input class="input__area" id="nombre" type="text" data-agregar="nombreUsuario" required>
+                        <span class="input__messege--error">Este campo no es válido.</span>
+                    </div>
+                    <div class="input__container input__textarea">
+                        <textarea class="input__area" placeholder="Escribe tu mensaje" cols="1" rows="1" data-agregar="mensajeUsuario" required maxlength="250"></textarea>
+                        <span class="input__messege--error">Este campo no es válido.</span>
+                    </div>
+                    <input class="formulario__boton boton" type="submit" value="Enviar mensaje" />
+                </form>
+            </div>
+
+        </div>
+        <div class="rodapie__firma">
+            <p>Desarrollado por David Blanc<br />2022</p>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+    <script type="module" src="controllers/client-controller.js"></script>
+    <script type="module" src="controllers/registro-controller.js"></script>
+    <script type="module" src="../js/app.js"></script>
+    
+</body>
+
+</html>

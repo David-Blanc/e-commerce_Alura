@@ -1,0 +1,6 @@
+.agregar {
+    background: var(--fondo-productos);
+
+    align-items: center;
+    padding: 4rem 0 5rem 0;
+}
