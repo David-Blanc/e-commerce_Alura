@@ -28,7 +28,6 @@ const obtenerInf = async () => {
     } catch (error) {
         console.log(error)
     }
-
 }
 
 obtenerInf();

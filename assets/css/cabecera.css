@@ -25,10 +25,11 @@
 
 .buscador__textarea {
     width: 80%;
-    background: var(--fondo-input);
+    background: none;
     border: none;
     color: var(--input-placeholder);
     font-size: 1rem;
+    height: 100%;
 }
 
 .buscador__textarea:focus {
@@ -44,6 +45,12 @@
     padding: 0;
     margin-left: 4px;
 
+}
+
+.search--error {
+    width: auto;
+    font-size: .875rem;
+    margin-top: 65px;
 }
 
 .cabecera__boton {
@@ -93,12 +100,17 @@
     }
 
     .buscador__textarea {
-        font-size: 0.875rem;;
+        font-size: 0.875rem;
+        ;
     }
 
     .cabecera__boton {
         height: 2.5rem;
         font-size: 0.875rem;
+    }
+
+    .search--error {
+        margin-top: 55px;
     }
 }
 
@@ -107,7 +119,7 @@
         justify-content: space-between;
         width: 368px;
     }
-    
+
     .cabecera__logo {
         order: 1;
     }

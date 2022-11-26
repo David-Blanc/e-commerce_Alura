@@ -49,6 +49,10 @@ const mensajesDeError = {
     },
     mensajeUsuario: {
         valueMissing: "Mensaje no puede estar vacío.",
+    },
+    search: {
+        valueMissing: "Ingrese una palabra",
+        patternMismatch: "Ingrese una palabra"
     }
 }
 
@@ -85,3 +89,10 @@ const validarPrecio = (input) => {
         input.value = input.value.replace(aux, ",");
     }
 };
+
+export function filename(){
+    var rutaAbsoluta = self.location.href;   
+    var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
+    var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
+    return rutaRelativa;  
+}

@@ -15,6 +15,11 @@
     <script src="https://kit.fontawesome.com/a18c207c0f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/cabecera.css">
 
+    <link rel="stylesheet" href="../assets/css/productos.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-descripcion.css">
+    <link rel="stylesheet" href="../assets/css/productos/producto.css">
+    <link rel="stylesheet" href="../assets/css/productos/productos-contenedor.css">
+
     <link rel="stylesheet" href="../assets/css/rodapie.css">
     <link rel="stylesheet" href="../assets/css/rodapie/rodapie-contacto.css">
     <link rel="stylesheet" href="../assets/css/rodapie/rodapie-firma.css">
@@ -26,9 +31,10 @@
 <body>
     <header class="cabecera" data-header>
         <a href="../index.html"><img class="cabecera__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
-        <form class="cabecera__buscador" action="">
-            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?">
-            <button class="buscador__boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <form class="cabecera__buscador" action="" data-form-search>
+            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-agregar="search" required pattern="[\s\d\w]*(?=[a-zñA-ZÑ0-9]+)[\s\d\w]*">
+            <button class="buscador__boton" type="submit" data-submit-search><i class="fa-solid fa-magnifying-glass"></i></button>
+            <span class="input__messege--error search--error"></span>
         </form>
         <button class="cabecera__boton boton__admin" data-admin-boton>Menú Administrador</button>
     </header>
@@ -101,6 +107,7 @@
     </footer>
     <script type="module" src="../js/controllers/edicion-controller.js"></script>
     <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/controllers/search-controller.js"></script>
 </body>
 
 </html>

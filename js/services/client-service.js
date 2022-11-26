@@ -42,5 +42,5 @@ export const clientServices = {
     deleteProduct,
     editProduct,
     detalleProduct,
-    usersList
+    usersList,
 };

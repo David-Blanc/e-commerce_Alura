@@ -5,7 +5,7 @@
     margin: 0 auto;
     gap: 1.5rem 1rem;
     justify-content: flex-start;
-    max-width: 1136px;
+    width: 1136px;
 }
 
 @media screen and (max-width: 1420px) {

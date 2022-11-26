@@ -30,8 +30,9 @@
     <header class="cabecera">
         <a href="index.html"><img class="cabecera__logo" src="assets/img/Logo.svg" alt="Logo"></a>
         <form class="cabecera__buscador" action="" data-form-search>
-            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-input-search>
+            <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-agregar="search" required pattern="[\s\d\w]*(?=[a-zñA-ZÑ0-9]+)[\s\d\w]*">
             <button class="buscador__boton" type="submit" data-submit-search><i class="fa-solid fa-magnifying-glass"></i></button>
+            <span class="input__messege--error search--error"></span>
         </form>
         <a href="screens/login.html" class="cabecera__boton">Login</a>
     </header>
