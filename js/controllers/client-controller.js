@@ -1,21 +1,23 @@
 import { clientServices } from "../services/client-service.js";
 import { filename } from "../validaciones.js";
 
-export const postNewProduct = (url, nombre, precio) => {
+export const postNewProduct = (url, nombre, precio, id) => {
     const productBox = document.createElement("div");
     productBox.classList.add("producto", "producto__inicio");
 
-    let urlPath = url;
+    let urlProd = url;
+    let urlScreen = "";
 
     if (filename() != "index.html") {
-        urlPath = "../" + url;
+        urlProd = "../" + url;
+        urlScreen = "../";
     }
-    
+
     const product = `
-        <img class="producto__imagen" src="${urlPath}" alt="${nombre}">
+        <img class="producto__imagen" src="${urlProd}" alt="${nombre}">
         <h3 class="producto__nombre">${nombre}</h3>
         <p class="producto__precio">${precio}</p>
-        <button class="producto__boton">Ver Producto</button>
+        <a href="${urlScreen}screens/producto.html?id=${id}"><button class="producto__boton">Ver Producto</button></a>
     `;
 
     productBox.innerHTML = product;
@@ -23,32 +25,43 @@ export const postNewProduct = (url, nombre, precio) => {
 }
 
 if (filename() == "index.html") {
-    const productsContainer = document.querySelector("[data-productos-inicio]");
-
-
-    clientServices.productsList().then(response => {
-        const arrAux = [];
-        const prodCat = response.filter(producto => producto.categoria.toLowerCase() == "star wars");
-        const rango = prodCat.length;
     
-        if (rango > 6) {
-            while (arrAux.length < 6) {
-                let num = Math.floor(Math.random() * rango);
-                if (!arrAux.some(n => n == num)) {
-                    arrAux.push(num);
-                }
-            }
-            for (let i = 0; i < 6; i++) {
-                const newProduct = postNewProduct(prodCat[arrAux[i]].url, prodCat[arrAux[i]].nombre, prodCat[arrAux[i]].precio);
-                productsContainer.appendChild(newProduct);
-            }
-        } else {
-            for (let i = 0; i < rango; i++) {
-                const newProduct = postNewProduct(prodCat[i].url, prodCat[i].nombre, prodCat[i].precio);
-                productsContainer.appendChild(newProduct);
+    clientServices.productsList().then(response => {
+        const catStarWars = response.filter(producto => producto.categoria.toLowerCase() == "star wars");
+        mostrarAleatorio(catStarWars, document.querySelector("[data-productos-inicio1]"));
+
+        const catConsolas = response.filter(producto => producto.categoria.toLowerCase() == "consolas");
+        mostrarAleatorio(catConsolas, document.querySelector("[data-productos-inicio2]"));
+
+        const catDiversos = response.filter(producto => producto.categoria.toLowerCase() == "diversos");
+        mostrarAleatorio(catDiversos, document.querySelector("[data-productos-inicio3]"));
+
+    })
+
+}
+
+
+export const mostrarAleatorio = (prodCat, productsContainer) => {
+    
+    const arrAux = [];
+    const rango = prodCat.length;
+
+    if (rango > 6) {
+        while (arrAux.length < 6) {
+            let num = Math.floor(Math.random() * rango);
+            if (!arrAux.some(n => n == num)) {
+                arrAux.push(num);
             }
         }
-    
-    }).catch(error => console.log("Ocurrió un error" + error));
+        for (let i = 0; i < 6; i++) {
+            const newProduct = postNewProduct(prodCat[arrAux[i]].url, prodCat[arrAux[i]].nombre, prodCat[arrAux[i]].precio, prodCat[arrAux[i]].id);
+            productsContainer.appendChild(newProduct);
+        }
+    } else {
+        for (let i = 0; i < rango; i++) {
+            const newProduct = postNewProduct(prodCat[i].url, prodCat[i].nombre, prodCat[i].precio, prodCat[i].id);
+            productsContainer.appendChild(newProduct);
+        }
+    }
 }
 

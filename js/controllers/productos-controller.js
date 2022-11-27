@@ -1,5 +1,4 @@
 import { clientServices } from "../services/client-service.js";
-//import { editProduct } from "../controllers/registro-controller.js";
 
 const postNewProduct = (url, nombre, precio, id) => {
     const productBox = document.createElement("div");
@@ -9,7 +8,7 @@ const postNewProduct = (url, nombre, precio, id) => {
         <span class="producto__edit"><i class="fa-solid fa-trash" id="${id}"></i><a href="../screens/edicionProducto.html?id=${id}"><i class="fa-solid fa-pen"></i></a></span>
         <h3 class="producto__nombre">${nombre}</h3>
         <p class="producto__precio">${precio}</p>
-        <button class="producto__boton">Ver Producto</button>
+        <a href="../screens/producto.html?id=${id}"><button class="producto__boton">Ver Producto</button></a>
     `;
 
     productBox.innerHTML = product;
