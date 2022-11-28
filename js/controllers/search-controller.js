@@ -7,14 +7,16 @@ const searchBar = document.querySelector("[data-form-search]");
 searchBar.addEventListener("submit", (event) => {
     event.preventDefault();
     const searchWord = event.target.querySelector("input").value;
+    const regexp = /[\s\d\w]*(?=[a-zñA-ZÑ0-9]+)[\s\d\w]*/;
 
-    reemplazarBody(searchWord);
-
-    showSearchProducts(searchWord);
+    if (regexp.test(searchWord)) {
+        reemplazarBody(searchWord, "Productos"," encontrados");
+        showSearchProducts(searchWord);
+    }
 
 })
 
-function reemplazarBody(searchWord) {
+export function reemplazarBody(searchWord, fraseAntes, fraseDespues) {
     const sectionsHidden = document.querySelectorAll("section");
     sectionsHidden.forEach(elto => document.querySelector("body").removeChild(elto))
 
@@ -22,7 +24,7 @@ function reemplazarBody(searchWord) {
     section.classList.add("productos");
     const searchSection = `
         <div class="productos__descripcion">
-            <h2 class="descripcion__titulo">Productos "${searchWord}" encontrados</h2>
+            <h2 class="descripcion__titulo">${fraseAntes} "${searchWord}" ${fraseDespues}</h2>
         </div>
         <div class="productos__contenedor" data-productos-container>
         </div>
@@ -31,7 +33,7 @@ function reemplazarBody(searchWord) {
     document.querySelector("body").insertBefore(section, document.querySelector("footer"));
 }
 
-function showSearchProducts(searchWord) {
+export function showSearchProducts(searchWord) {
     const productsContainer = document.querySelector("[data-productos-container]");
 
     clientServices.productsList().then(response => {
@@ -47,3 +49,34 @@ function showSearchProducts(searchWord) {
         })
     })
 }
+
+//Despliegue de la barra de búsqueda en pantallas < 768px
+
+const searchBoton = document.querySelector("[data-submit-search]");
+const searchArea = document.querySelector(`[data-agregar="search"]`);
+
+searchBoton.addEventListener("click", () => {
+    if (!searchBar.classList.contains("buscador--desplegar")) {
+        searchBar.classList.add("buscador--desplegar")
+        searchArea.classList.add("textarea--desplegar")
+        searchBoton.classList.add("searchboton--desplegar")
+        searchArea.focus();
+
+        if (document.querySelector(".cabecera__boton")) {
+            document.querySelector(".cabecera__boton").classList.add("boton--desplegar");
+        }
+
+        document.addEventListener("mousedown", function (event) {
+            if (!searchBar.contains(event.target)) {
+                searchBar.classList.remove("buscador--desplegar")
+                searchArea.classList.remove("textarea--desplegar")
+                searchBoton.classList.remove("searchboton--desplegar")
+                if (document.querySelector(".cabecera__boton")) {
+                    setTimeout(() => {
+                        document.querySelector(".cabecera__boton").classList.remove("boton--desplegar");
+                    }, 900);
+                }
+            }
+        });
+    }
+})

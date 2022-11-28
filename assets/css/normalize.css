@@ -35,6 +35,14 @@ body {
     padding: 0 1rem;
 }
 
+.boton:hover, button:hover {
+    cursor: pointer;
+}
+
+.boton:active, button:active {
+    scale: 0.95;
+}
+
 .input__container {
     background: var(--fondo-color);
     width: 100%;

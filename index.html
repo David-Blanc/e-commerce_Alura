@@ -29,12 +29,12 @@
 <body>
     <header class="cabecera">
         <a href="index.html"><img class="cabecera__logo" src="assets/img/Logo.svg" alt="Logo"></a>
-        <form class="cabecera__buscador" action="" data-form-search>
+        <form class="cabecera__buscador" action="" data-form-search novalidate>
             <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-agregar="search" required pattern="[\s\d\w]*(?=[a-zñA-ZÑ0-9]+)[\s\d\w]*">
             <button class="buscador__boton" type="submit" data-submit-search><i class="fa-solid fa-magnifying-glass"></i></button>
             <span class="input__messege--error search--error"></span>
         </form>
-        <a href="screens/login.html" class="cabecera__boton">Login</a>
+        <a href="screens/login.html" class="cabecera__boton boton">Login</a>
     </header>
     <section class="banner">
         <div class="banner__container">
@@ -48,7 +48,7 @@
     <section class="productos">
         <div class="productos__descripcion">
             <h2 class="descripcion__titulo">Star Wars</h2>
-            <button class="descripcion__boton">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="descripcion__boton" data-categoria="starWars">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <div class="productos__contenedor" data-productos-inicio1>
 
@@ -56,7 +56,7 @@
 
         <div class="productos__descripcion">
             <h2 class="descripcion__titulo">Consolas</h2>
-            <button class="descripcion__boton">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="descripcion__boton" data-categoria="consolas">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <div class="productos__contenedor" data-productos-inicio2>
 
@@ -64,7 +64,7 @@
 
         <div class="productos__descripcion">
             <h2 class="descripcion__titulo">Diversos</h2>
-            <button class="descripcion__boton">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="descripcion__boton" data-categoria="diversos">Ver todo <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <div class="productos__contenedor" data-productos-inicio3>
 

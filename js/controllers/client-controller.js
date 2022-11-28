@@ -1,5 +1,7 @@
 import { clientServices } from "../services/client-service.js";
 import { filename } from "../validaciones.js";
+import { reemplazarBody } from "./search-controller.js";
+import { showSearchProducts } from "./search-controller.js";
 
 export const postNewProduct = (url, nombre, precio, id) => {
     const productBox = document.createElement("div");
@@ -65,3 +67,13 @@ export const mostrarAleatorio = (prodCat, productsContainer) => {
     }
 }
 
+const seccionesPorCat = document.querySelectorAll(`[data-categoria]`);
+
+seccionesPorCat.forEach( seccion => {
+    seccion.addEventListener("click", (seccion) => {
+        const cat = seccion.target.parentElement.querySelector("h2").innerHTML;
+        reemplazarBody(cat, "Categoría", "");
+        showSearchProducts(cat)
+        window.scrollTo(0, 0);
+    })
+})

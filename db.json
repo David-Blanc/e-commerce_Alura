@@ -46,7 +46,7 @@
       "url": "assets/img/dePrueba/unsplash_R8L1l9RN198.png",
       "categoria": "Star Wars",
       "nombre": "Mattel Baby Yoda Peluche",
-      "precio": "$ 65,00",
+      "precio": "$ 62,50",
       "descripcion": "Soldado imperial, edicion de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
       "id": 6
     },
@@ -126,7 +126,7 @@
       "url": "assets/img/dePrueba/Diversos4.png",
       "categoria": "Diversos",
       "nombre": "Reloj despertador",
-      "precio": "$ 29,00",
+      "precio": "$ 27,00",
       "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
       "id": "d4"
     },
@@ -153,6 +153,30 @@
       "precio": "$ 21,90",
       "descripcion": "Soldado imperial, edición de coleccionista año 1998, fuera de su empaque original (que no se incluye), en condicionas 7 de 10.",
       "id": "d2"
+    },
+    {
+      "url": "assets/img/dePrueba/monopoly-star-wars.jpg",
+      "categoria": "Star Wars",
+      "nombre": "Monopoly Star Wars",
+      "precio": "$ 7.85",
+      "descripcion": "Board Game Part: GAMEBOARD ONLY Limited Collector's Edition.",
+      "id": "e8c0dc0b-85c8-4754-aabe-58b12ec25fd8"
+    },
+    {
+      "url": "assets/img/dePrueba/nintendo-64-console.jpg",
+      "categoria": "Consolas",
+      "nombre": "Nintendo 64",
+      "precio": "$ 99.99",
+      "descripcion": "N64 console +1 OEMcontrollers+AC+Choice Accessories Used Region free",
+      "id": "52ca658d-b64c-42d5-8007-00e2994cb4a7"
+    },
+    {
+      "url": "assets/img/dePrueba/silla-gamer.jpg",
+      "categoria": "Diversos",
+      "nombre": "Silla de Gaming de Cuero",
+      "precio": "$ 715.99",
+      "descripcion": "Silla de Gaming de Cuero, Asiento Ajustable Para Gaming, Juega Cómodo",
+      "id": "d5ea1d5d-35a0-4702-84a0-11e7b73766fa"
     }
   ]
 }

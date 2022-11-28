@@ -30,7 +30,7 @@
 <body>
     <header class="cabecera">
         <a href="../index.html"><img class="cabecera__logo" src="../assets/img/Logo.svg" alt="Logo"></a>
-        <form class="cabecera__buscador" action="" data-form-search>
+        <form class="cabecera__buscador" action="" data-form-search novalidate>
             <input class="buscador__textarea" type="text" name="" placeholder="¿Qué desea buscar?" data-agregar="search" required pattern="[\s\d\w]*(?=[a-zñA-ZÑ0-9]+)[\s\d\w]*">
             <button class="buscador__boton" type="submit" data-submit-search><i class="fa-solid fa-magnifying-glass"></i></button>
             <span class="input__messege--error search--error"></span>
@@ -38,7 +38,7 @@
     </header>
 
     <section class="login">
-        <form class="login__container" action="" data-login>
+        <form class="login__container" action="" data-login novalidate>
             <h2 class="login__title">Iniciar Sesión</h2>
             <div class="input__container">
                 <input class="input__area login__email" type="email" placeholder="Escriba su correo electrónico" data-agregar="email" required>

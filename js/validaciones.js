@@ -1,6 +1,9 @@
 export function valida(input) {
     const tipoDeInput = input.dataset.agregar;
     if (validadores[tipoDeInput]) {
+        if (validadores[tipoDeInput] = "no mostrar mensaje") {
+            return
+        }
         validadores[tipoDeInput](input);
     }
     if(input.validity.valid){
@@ -59,9 +62,10 @@ const mensajesDeError = {
 const validadores = {
     /*url: ,
     categoria: ,
-    nombre: ,*/
-    precio: input => validarPrecio(input)
-    //descripcion: 
+    nombre: ,
+    descripcion: ,*/
+    precio: input => validarPrecio(input),
+    search: "no mostrar mensaje"
 };
 
 const mostrarMsjDeError = (tipoDeInput, input) => {

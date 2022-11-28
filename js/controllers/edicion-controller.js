@@ -40,7 +40,6 @@ form.addEventListener("submit", (event) => {
     const nombre = document.querySelector(`[data-agregar="nombre"]`).value;
     const precio = document.querySelector(`[data-agregar="precio"]`).value;
     const descripcion = document.querySelector(`[data-agregar="descripcion"]`).value;
-    console.log(urlProd, id)
 
     clientServices.editProduct(urlProd, categoria, nombre, precio, descripcion, id).then(() => { window.location.href = "../screens/productos.html"; }).catch(error => console.log(error));
 })

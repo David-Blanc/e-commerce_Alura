@@ -14,7 +14,7 @@
 
 .cabecera__buscador {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: var(--fondo-productos);
     width: 28vw;
@@ -30,6 +30,8 @@
     color: var(--input-placeholder);
     font-size: 1rem;
     height: 100%;
+    margin-right: 4px;
+    padding-left: 1rem;
 }
 
 .buscador__textarea:focus {
@@ -38,12 +40,13 @@
 }
 
 .buscador__boton {
-    background: var(--fondo-input);
+    background: none;
     border: none;
     color: var(--input-placeholder);
     font-size: 1rem;
     padding: 0;
-    margin-left: 4px;
+    height: 100%;
+    padding-right: 1rem;
 
 }
 
@@ -127,22 +130,47 @@
     .cabecera__buscador {
         order: 3;
         margin: 0;
-        width: auto;
+        width: 25px;
         background: var(--fondo-color);
+        justify-content: flex-end;
+        transition: 1s;
+    }
+
+    .buscador--desplegar {
+        width: 60%;
+        background: var(--fondo-productos);
+        transition: 1s;
     }
 
     .buscador__textarea {
         display: none;
+
+    }
+
+    .textarea--desplegar {
+        display: flex;
+
     }
 
     .buscador__boton {
-        background: var(--fondo-color);
+        background: none;
         color: var(--font-color);
+        padding-right: 0;
+        transition: 1s;
+    }
+
+    .searchboton--desplegar {
+        padding-right: 1rem;
+        transition: 1s;
     }
 
     .cabecera__boton {
         order: 2;
         margin: 0;
+    }
+
+    .boton--desplegar {
+        display: none;
     }
 }
 
