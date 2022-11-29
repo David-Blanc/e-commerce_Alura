@@ -27,7 +27,7 @@ export const postNewProduct = (url, nombre, precio, id) => {
 }
 
 if (filename() == "index.html") {
-    
+
     clientServices.productsList().then(response => {
         const catStarWars = response.filter(producto => producto.categoria.toLowerCase() == "star wars");
         mostrarAleatorio(catStarWars, document.querySelector("[data-productos-inicio1]"));
@@ -37,14 +37,32 @@ if (filename() == "index.html") {
 
         const catDiversos = response.filter(producto => producto.categoria.toLowerCase() == "diversos");
         mostrarAleatorio(catDiversos, document.querySelector("[data-productos-inicio3]"));
-
     })
 
+    const linkBanner = document.querySelector(`[data-link-banner]`);
+
+    linkBanner.addEventListener("click", () => {
+        const cat = linkBanner.querySelector("span").innerHTML;
+        reemplazarBody(cat, "Categoría", "");
+        showSearchProducts(cat)
+        window.scrollTo(0, 0);
+    })
+
+
+    if (sessionStorage.getItem("sesion")) {
+        const loginBoton = document.querySelector(`[data-login-boton]`);
+        const sesionBoton = document.createElement("a");
+        sesionBoton.classList.add("usuario__boton", "cabecera__boton");
+        sesionBoton.href = "screens/productos.html";
+        const sesionContent = `<i class="fa-solid fa-user"></i>`
+        sesionBoton.innerHTML = sesionContent;
+        loginBoton.replaceWith(sesionBoton);
+    }
 }
 
 
 export const mostrarAleatorio = (prodCat, productsContainer) => {
-    
+
     const arrAux = [];
     const rango = prodCat.length;
 
@@ -69,7 +87,7 @@ export const mostrarAleatorio = (prodCat, productsContainer) => {
 
 const seccionesPorCat = document.querySelectorAll(`[data-categoria]`);
 
-seccionesPorCat.forEach( seccion => {
+seccionesPorCat.forEach(seccion => {
     seccion.addEventListener("click", (seccion) => {
         const cat = seccion.target.parentElement.querySelector("h2").innerHTML;
         reemplazarBody(cat, "Categoría", "");

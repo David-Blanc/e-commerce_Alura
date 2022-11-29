@@ -16,19 +16,22 @@ const loginCheckIn = (email, password) => {
         response.forEach(usuario => {
             if (usuario.email == email && usuario.contraseña == password) {
                 aux = true;
+                const sesionObj = {email, password};
+                sessionStorage.setItem("sesion", JSON.stringify(sesionObj))
+
                 window.location.href = "../screens/productos.html";
             }
         })
 
         if (!aux) {
-            porUpError()
+            popUpError()
         }
         
     }).catch(error => console.log(error));
 
 };
 
-const porUpError = () => {
+const popUpError = () => {
     const errorMessage = document.createElement("span");
     errorMessage.classList.add("login__error");
     errorMessage.innerHTML = `Credenciales incorrectas`;

@@ -74,7 +74,7 @@ searchBoton.addEventListener("click", () => {
                 if (document.querySelector(".cabecera__boton")) {
                     setTimeout(() => {
                         document.querySelector(".cabecera__boton").classList.remove("boton--desplegar");
-                    }, 900);
+                    }, 100);
                 }
             }
         });
